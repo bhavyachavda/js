@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7</title>
+</head>
+<body>
+        <h2>Assignment 7</h2>
+        
+        <!--Input type Checkboxes-->
+        
+        <p>Choose your Country</p>
+        
+        <!-- <input type="checkbox" name="sample" />Check all -->
+         <input type="checkbox" id="sample1"onclick='selects()' value="Check All" />
+         <label for="sample1">Check All</label>
+         <input type="checkbox" id="sample2" onclick='deselects()' value="UnCheck All" />
+         <label for="sample2">UnCheck All</label><br><br>
+
+        <input type="checkbox" id="usa" name="sample" value="usa">
+        <label for="usa">USA</label><br>
+        <input type="checkbox" id="uk" name="sample" value="uk">
+        <label for="uk">UK</label><br>
+        <input type="checkbox" id="india" name="sample" value="india" >
+        <label for="india">India</label><br>
+        <input type="checkbox" id="Asia Pacific" name="sample" value="Asia Pacific" >
+        <label for="Asia Pacific">Asia Pacific</label><br>
+        <input type="checkbox" id="Australia" name="sample" value="Australia" >
+        <label for="Australia">Australia</label><br>
+        <input type="checkbox" id="Middle East" name="sample" value="Middle East" >
+        <label for="Middle East">Middle East</label><br>
+
+
+    <script>
+        function selects() {
+            var ele = document.getElementsByName('sample');
+            for (var i = 0; i < ele.length; i++) {
+                if (ele[i].type == 'checkbox')
+                    ele[i].checked = true;
+            }
+        }
+        function deselects() {
+            var ele = document.getElementsByName('sample');
+            for (var i = 0; i < ele.length; i++) {
+                if (ele[i].type == 'checkbox')
+                    ele[i].checked = false;
+            }
+        }
+    </script>
+</body>
+</html>

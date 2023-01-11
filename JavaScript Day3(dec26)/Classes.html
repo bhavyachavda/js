@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Classes & Modules, Error Handling</h2>
+
+<!--<p id="demo"></p>
+
+<script>
+    //Syntax
+    //document.getElementById("demo").innerHTML = 19.50;
+    //document.getElementById("demo").innerHTML = "Bhavya Chavda";
+    // var x;
+    // x = 5;
+    // document.getElementById("demo").innerHTML = x * 10;
+
+    //Inheritance
+    // class Car
+    // {
+    //     constructor(brand)
+    //     {
+    //         this.carname=brand;
+    //     }
+    //     present()
+    //     {
+    //         return 'I have a ' + this.carname;
+    //     }
+    // }
+
+    // class Model extends Car{
+    //     constructor(brand, mod)
+    //     {
+    //         super(brand);
+    //         this.model=mod;
+    //     }
+    //     show()
+    //     {
+    //         return this.present() + ', it is a ' + this.model;
+    //     }
+    // }
+
+    // let myCar = new Model("Ford","Mustang");
+    // document.getElementById("demo").innerHTML=myCar.show();
+
+    // class Car
+    // {
+    //     constructor(brand)
+    //     {
+    //         this.carname=brand;
+    //     }
+    //     get cname()
+    //     {
+    //         return this.carname; 
+    //     }
+    //     set cname(x)
+    //     {
+    //         this.carname=x;
+    //     }
+    // }
+    // let myCar=new Car("Audi");
+    // document.getElementById("demo").innerHTML=myCar.cname;
+
+    //Static Methods
+    // class Car
+    // {
+    //     constructor(name)
+    //     {
+    //         this.name=name;
+    //     }
+    //     static hello(){
+    //         return "Bhavya";
+    //     }
+    // }
+    // let myCar=new Car("BMW");
+    // document.getElementById("demo").innerHTML=Car.hello();
+</script>-->
+
+<!-- <p id="demo"></p>
+<script type="module">
+    //JS Modules
+    import{name,age} from "./person.js";
+    let text="My name is " + name + ", I am " + age + ".";
+    document.getElementById("demo").innerHTML=text;
+</script> -->
+
+<!-- <p id="demo"></p>
+<script>
+    //Error Handling
+    try{
+        addlert("Welcome Bhavya Chavda!");
+    }
+    catch(err)
+    {
+        document.getElementById("demo").innerHTML=err.message;
+    }
+</script> -->
+
+<!-- <h3>Javascript try catch</h3>
+<p>Enter number between 5 and 10 </p>
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">Test Input</button>
+<p id="p1"></p>
+<script>
+    function myFunction(){
+        const message = document.getElementById("p1");
+        message.innerHTML="";
+        let x = document.getElementById("demo").value;
+        try{
+            if(x.trim()== "") throw "empty";
+            if(isNaN(x)) throw "not a number";
+            x=Number(x);
+            if(x<5) throw "It is too low";
+            if(x>10) throw "It is too high";
+        }
+        catch(err)
+        {
+            message.innerHTML="Input is " + err;    
+        }
+        finally
+        {
+            document.getElementById("demo").value="";
+        }
+    }
+</script> -->
+
+<!-- <h3>Range Error</h3>
+<p id="demo"></p>
+<script>
+    let num=1;
+    try{
+        num.toPrecision(300);
+    }
+    catch(err)
+    {
+        document.getElementById("demo").innerHTML=err.name;
+    }
+</script> -->
+
+<!-- <h3>Reference Error </h3>
+<p id="demo"></p>
+<script>
+    let num=1;
+    try{
+        x=y+1;
+    }
+    catch(err){
+        document.getElementById("demo").innerHTML=err.name;
+    }
+</script> -->
+
+<!-- <h3>Syntax Error</h3>
+<p id="demo"></p>
+<script>
+    try{
+        eval("alert('Bhavya')");
+    }
+    catch(err)
+    {
+        document.getElementById("demo").innerHTML=err.name;
+    }
+</script> -->
+
+<!-- <h3>Type Error</h3>
+<p id="demo"></p>
+<script>
+    let num=1;
+    try{
+        num.toUpperCase();
+    }
+    catch(err)
+    {
+        document.getElementById("demo").innerHTML=err.name;
+    }
+</script> -->
+
+<h3>URL Error</h3>
+<p id="demo"></p>
+<script>
+    try{
+        decodeURI('%%%');
+    }
+    catch(err)
+    {
+        document.getElementById("demo").innerHTML=err.name;
+    }
+</script>
+
+</body>
+</html>

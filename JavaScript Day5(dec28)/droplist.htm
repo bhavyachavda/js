@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 12</title>
+</head>
+<body>
+    <div>
+    <h2>Country Name</h2>
+    <form>
+        <select id="mylist" onchange="favcountry()">
+            <option value = "Please select" selected>Please select</option>
+            <option value="India">India</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="China">China</option>
+            <option value="Russia">Russia</option>
+            <option value="Argentina">Argentina</option>
+        </select>
+        
+        <div id="notdisplay">
+            <p>India</p>
+            <p>United Kingdom</p>
+            <p>China</p>
+            <p>Russia</p>
+            <p>Argentina</p>
+        </div>
+    </form>
+        <p id="country"></p>
+    <script>
+         const disp = document.getElementById("mylist");
+         const nodisp = document.getElementById("notdisplay");
+         const cntry = document.getElementById("country");
+
+         const favcountry = () =>{
+
+            if(disp[disp.selectedIndex].index === 0){
+                cntry.innerHTML = "Your Selected Country: India <br>" +
+                                    "Your Selected Country: United Kingdom <br>" +
+                                    "Your Selected Country: China <br>" +
+                                    "Your Selected Country: Russia <br>" +
+                                    "Your Selected Country: Argentina <br>" 
+            }
+            else
+            {
+                cntry.innerHTML = "Your Selected Country: " + disp[disp.selectedIndex].text;
+            }
+            nodisp.remove();
+         }
+    </Script>
+</body>
+</html>
